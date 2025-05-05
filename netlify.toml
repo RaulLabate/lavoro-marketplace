@@ -1,22 +1,9 @@
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  [build]
-  base = "frontend"  # Mas a pasta real se chama "src" ou "app"
 [build]
-  base = "src"
-  command = "npm run build"
-  publish = "dist"
-[build]
-  base = "."
-  command = "npm run build"
-  publish = "dist"
-  functions = "functions"  # Se usar Netlify Functions
+  base = "src"                 # Pasta do código-fonte
+  command = "npm run build"    # Comando de build correto
+  publish = "dist"             # Pasta de output
+  functions = "functions"      # Pasta para Netlify Functions (opcional)
 
 [dev]
-  command = "npm run dev"
-  targetPort = 5173  # Porta do Vite
-  publish = "dist"
-
+  command = "npm run dev"      # Comando para desenvolvimento
+  targetPort = 5173            # Porta do Vite (ajuste se necessário)
