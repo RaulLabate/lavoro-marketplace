@@ -3,6 +3,12 @@
   to = "/index.html"
   status = 200
 [build]
-base = "caminho/para/seu/frontend"
-command = "cd caminho/para/seu/frontend && npm run build"
-publish = "caminho/para/seu/frontend/dist"
+  base = "."
+  command = "npm run build"
+  publish = "dist"
+  functions = "functions"  # Se usar Netlify Functions
+
+[dev]
+  command = "npm run dev"
+  targetPort = 5173  # Porta do Vite
+  publish = "dist"
