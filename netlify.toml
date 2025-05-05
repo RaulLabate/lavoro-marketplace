@@ -1,6 +1,4 @@
-git add netlify.toml
-git commit -m "Corrige configuração do Netlify"
-git push origin main
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -21,8 +19,4 @@ git push origin main
   command = "npm run dev"
   targetPort = 5173  # Porta do Vite
   publish = "dist"
-  "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-}
+
